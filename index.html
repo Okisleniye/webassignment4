@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Assignment 4. Forms and Validation</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-4 mb-5">
+
+<h1>Assignment 4. Forms and Validation</h1>
+
+<h2 class="mt-5">Task 0. Simple Contact Form</h2>
+<form>
+<label for="name0">Name</label><br>
+<input type="text" id="name0" name="name"><br><br>
+<label for="email0">Email</label><br>
+<input type="email" id="email0" name="email"><br><br>
+<label for="message0">Message</label><br>
+<textarea id="message0" name="message" rows="5" cols="30"></textarea><br><br>
+<button type="submit">Submit</button>
+</form>
+
+<h2 class="mt-5">Task 1. Form with HTML5 Validation</h2>
+<form>
+<label for="name1">Name</label><br>
+<input type="text" id="name1" name="name" required minlength="2" maxlength="30"><br><br>
+<label for="email1">Email</label><br>
+<input type="email" id="email1" name="email" required maxlength="50"><br><br>
+<label for="message1">Message</label><br>
+<textarea id="message1" name="message" rows="5" cols="30" required minlength="10" maxlength="200"></textarea><br><br>
+<button type="submit">Submit</button>
+</form>
+
+<h2 class="mt-5 mb-4">Task 2. Bootstrap Form Styling</h2>
+<form>
+<div class="row g-3">
+<div class="col-12 col-md-6">
+<label for="name2" class="form-label">Name</label>
+<input type="text" class="form-control" id="name2" placeholder="Enter your name">
+</div>
+<div class="col-12 col-md-6">
+<label for="email2" class="form-label">Email</label>
+<input type="email" class="form-control" id="email2" placeholder="name@example.com">
+<div class="form-text">We will never share your email.</div>
+</div>
+<div class="col-12">
+<label for="message2" class="form-label">Message</label>
+<textarea class="form-control" id="message2" rows="5" placeholder="Write your message here"></textarea>
+<div class="form-text">Maximum 200 characters.</div>
+</div>
+<div class="col-12">
+<button type="submit" class="btn btn-primary">Submit</button>
+</div>
+</div>
+</form>
+
+<h2 class="mt-5 mb-4">Task 3. Bootstrap Validation Styles</h2>
+<form id="contactForm" novalidate>
+<div class="row g-3">
+<div class="col-12 col-md-6">
+<label for="name3" class="form-label">Name</label>
+<input type="text" class="form-control" id="name3" placeholder="Enter your name" required maxlength="30">
+<div class="valid-feedback">Looks good!</div>
+<div class="invalid-feedback">Name is required</div>
+</div>
+<div class="col-12 col-md-6">
+<label for="email3" class="form-label">Email</label>
+<input type="email" class="form-control" id="email3" placeholder="name@example.com" required>
+<div class="valid-feedback">Looks good!</div>
+<div class="invalid-feedback">Email is required and must be valid</div>
+</div>
+<div class="col-12">
+<label for="message3" class="form-label">Message</label>
+<textarea class="form-control" id="message3" rows="5" placeholder="Write your message here" required maxlength="200"></textarea>
+<div class="valid-feedback">Looks good!</div>
+<div class="invalid-feedback">Message is required</div>
+</div>
+<div class="col-12">
+<button type="submit" class="btn btn-primary">Submit</button>
+</div>
+</div>
+</form>
+
+<h2 class="mt-5 mb-4">Task 4. Registration Form</h2>
+<form id="regForm" class="needs-validation" novalidate>
+<div class="row g-3">
+<div class="col-12 col-md-6">
+<label for="firstName" class="form-label">First Name</label>
+<input type="text" class="form-control" id="firstName" placeholder="First name" required minlength="2">
+<div class="valid-feedback">Looks good!</div>
+<div class="invalid-feedback">First name is required (min 2 characters)</div>
+</div>
+<div class="col-12 col-md-6">
+<label for="lastName" class="form-label">Last Name</label>
+<input type="text" class="form-control" id="lastName" placeholder="Last name" required minlength="2">
+<div class="valid-feedback">Looks good!</div>
+<div class="invalid-feedback">Last name is required (min 2 characters)</div>
+</div>
+<div class="col-12">
+<label for="email4" class="form-label">Email</label>
+<input type="email" class="form-control" id="email4" placeholder="name@example.com" required>
+<div class="valid-feedback">Looks good!</div>
+<div class="invalid-feedback">Enter a valid email</div>
+</div>
+<div class="col-12 col-md-6">
+<label for="password" class="form-label">Password</label>
+<input type="password" class="form-control" id="password" placeholder="Password" required minlength="8">
+<div class="form-text">At least 8 characters.</div>
+<div class="valid-feedback">Looks good!</div>
+<div class="invalid-feedback">Password must be at least 8 characters</div>
+</div>
+<div class="col-12 col-md-6">
+<label for="confirmPass" class="form-label">Confirm Password</label>
+<input type="password" class="form-control" id="confirmPass" placeholder="Repeat password" required>
+<div class="valid-feedback">Passwords match</div>
+<div class="invalid-feedback">Passwords must match</div>
+</div>
+<div class="col-12">
+<label class="form-label d-block">Gender</label>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="gender" id="male" value="male" required>
+<label class="form-check-label" for="male">Male</label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="gender" id="female" value="female" required>
+<label class="form-check-label" for="female">Female</label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="gender" id="other" value="other" required>
+<label class="form-check-label" for="other">Other</label>
+<div class="invalid-feedback">Please choose a gender</div>
+</div>
+</div>
+<div class="col-12">
+<label class="form-label d-block">Hobbies</label>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="checkbox" id="reading" value="reading">
+<label class="form-check-label" for="reading">Reading</label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="checkbox" id="gaming" value="gaming">
+<label class="form-check-label" for="gaming">Gaming</label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="checkbox" id="sports" value="sports">
+<label class="form-check-label" for="sports">Sports</label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="checkbox" id="music" value="music">
+<label class="form-check-label" for="music">Music</label>
+</div>
+</div>
+<div class="col-12 col-md-6">
+<label for="country" class="form-label">Country</label>
+<select class="form-select" id="country" required>
+<option value="">Choose...</option>
+<option>Kazakhstan</option>
+<option>Russia</option>
+<option>Germany</option>
+<option>USA</option>
+</select>
+<div class="valid-feedback">Looks good!</div>
+<div class="invalid-feedback">Please select a country</div>
+</div>
+<div class="col-12">
+<button type="submit" class="btn btn-primary">Submit</button>
+<button type="reset" class="btn btn-secondary">Reset</button>
+</div>
+</div>
+</form>
+<div id="success" class="alert alert-success mt-3 d-none">Registration successful!</div>
+
+</div>
+
+<script>
+const contactForm = document.getElementById('contactForm');
+const contactFields = contactForm.querySelectorAll('input, textarea');
+
+function check(field) {
+  if (field.checkValidity()) {
+    field.classList.remove('is-invalid');
+    field.classList.add('is-valid');
+  } else {
+    field.classList.remove('is-valid');
+    field.classList.add('is-invalid');
+  }
+}
+
+contactForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+  contactFields.forEach(check);
+});
+
+contactFields.forEach(function (field) {
+  field.addEventListener('input', function () {
+    check(field);
+  });
+});
+
+const regForm = document.getElementById('regForm');
+const pass = document.getElementById('password');
+const confirmPass = document.getElementById('confirmPass');
+const success = document.getElementById('success');
+
+function checkPass() {
+  if (pass.value !== confirmPass.value) {
+    confirmPass.setCustomValidity('Passwords do not match');
+  } else {
+    confirmPass.setCustomValidity('');
+  }
+}
+
+pass.addEventListener('input', checkPass);
+confirmPass.addEventListener('input', checkPass);
+
+regForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+  checkPass();
+  regForm.classList.add('was-validated');
+  if (regForm.checkValidity()) {
+    success.classList.remove('d-none');
+  } else {
+    success.classList.add('d-none');
+  }
+});
+
+regForm.addEventListener('reset', function () {
+  regForm.classList.remove('was-validated');
+  success.classList.add('d-none');
+});
+</script>
+</body>
+</html>
